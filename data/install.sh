@@ -14,4 +14,13 @@ echo "Setting filesystem permissions"
 chown -R www-data /www
 chgrp -R www-data /www
 
+
+echo "Setting up configurations files"
+# Rename these files so the shop can be configured
+mv -f /www/upload/config-dist.php /www/upload/config.php
+mv -f /www/upload/admin/config-dist.php /www/upload/admin/config.php
+# These will be used when the script runs the config for the shop automatically
+# mv -f /config/config.php /www/upload/config.php
+# mv -f /config/admin/config.php /www/upload/admin/config.php
+
 echo "Installation completed"
