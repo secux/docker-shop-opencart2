@@ -13,6 +13,7 @@ cd  /www \
 echo "Setting filesystem permissions"
 chown -R www-data /www
 chgrp -R www-data /www
+chmod -R 0775 /www
 
 
 echo "Setting up configurations files"
